@@ -6,5 +6,8 @@ public class TresEnRaya {
         if (x < 1 || x > 3) {
             throw new IllegalArgumentException("La coordenada X está fuera del tablero (debe ser entre 1 y 3)");
         }
+        if (y < 1 || y > 3) {
+            throw new IllegalArgumentException("La coordenada Y está fuera del tablero (debe ser entre 1 y 3)");
+        }
     }
 }
