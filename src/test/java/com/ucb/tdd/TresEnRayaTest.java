@@ -39,4 +39,11 @@ class TresEnRayaTest {
         juego.jugar(1, 1);
         assertEquals('+', juego.siguienteTurno());
     }
+
+    @Test
+    void despuesDeDosJugadasTurnoEsXOtraVez() {
+        juego.jugar(1, 1);
+        juego.jugar(1, 2);
+        assertEquals('X', juego.siguienteTurno());
+    }
 }
