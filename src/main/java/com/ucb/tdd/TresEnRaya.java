@@ -5,7 +5,7 @@ public class TresEnRaya {
     private final char[][] tablero = new char[3][3];
     private char turnoActual = 'X';
 
-    public void jugar(int x, int y) {
+    public String jugar(int x, int y) {
         if (x < 1 || x > 3) {
             throw new IllegalArgumentException("La coordenada X está fuera del tablero (debe ser entre 1 y 3)");
         }
@@ -17,6 +17,7 @@ public class TresEnRaya {
         }
         tablero[x - 1][y - 1] = turnoActual;
         turnoActual = (turnoActual == 'X') ? '+' : 'X';
+        return "sin ganador";
     }
 
     public char siguienteTurno() {
