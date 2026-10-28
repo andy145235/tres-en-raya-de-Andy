@@ -46,4 +46,10 @@ class TresEnRayaTest {
         juego.jugar(1, 2);
         assertEquals('X', juego.siguienteTurno());
     }
+
+    @Test
+    void unaJugadaSolaSinGanador() {
+        String resultado = juego.jugar(1, 1);
+        assertEquals("sin ganador", resultado);
+    }
 }
