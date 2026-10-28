@@ -22,4 +22,10 @@ class TresEnRayaTest {
     void cuandoLaColumnaEstaFueraDelTableroLanzaExcepcion() {
         assertThrows(IllegalArgumentException.class, () -> juego.jugar(1, 4));
     }
+
+    @Test
+    void cuandoLaCasillaYaEstaOcupadaLanzaExcepcion() {
+        juego.jugar(2, 2);
+        assertThrows(IllegalStateException.class, () -> juego.jugar(2, 2));
+    }
 }
