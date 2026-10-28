@@ -16,4 +16,8 @@ public class TresEnRaya {
         }
         tablero[x - 1][y - 1] = 'X';
     }
+
+    public char siguienteTurno() {
+        return 'X';
+    }
 }
