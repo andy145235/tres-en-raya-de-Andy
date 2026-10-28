@@ -28,4 +28,9 @@ class TresEnRayaTest {
         juego.jugar(2, 2);
         assertThrows(IllegalStateException.class, () -> juego.jugar(2, 2));
     }
+
+    @Test
+    void primerTurnoEsX() {
+        assertEquals('X', juego.siguienteTurno());
+    }
 }
