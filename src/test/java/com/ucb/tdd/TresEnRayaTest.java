@@ -52,4 +52,14 @@ class TresEnRayaTest {
         String resultado = juego.jugar(1, 1);
         assertEquals("sin ganador", resultado);
     }
+
+    @Test
+    void ganaXConFilaHorizontal() {
+        juego.jugar(1, 1); // X
+        juego.jugar(2, 1); // +
+        juego.jugar(1, 2); // X
+        juego.jugar(2, 2); // +
+        String resultado = juego.jugar(1, 3); // X
+        assertEquals("gana X", resultado);
+    }
 }
