@@ -26,6 +26,12 @@ public class TresEnRaya {
             }
         }
 
+        for (int col = 0; col < 3; col++) {
+            if (tablero[0][col] == jugador && tablero[1][col] == jugador && tablero[2][col] == jugador) {
+                return "gana " + jugador;
+            }
+        }
+
         return "sin ganador";
     }
 
