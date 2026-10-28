@@ -17,4 +17,9 @@ class TresEnRayaTest {
     void cuandoLaFilaEstaFueraDelTableroLanzaExcepcion() {
         assertThrows(IllegalArgumentException.class, () -> juego.jugar(4, 1));
     }
+
+    @Test
+    void cuandoLaColumnaEstaFueraDelTableroLanzaExcepcion() {
+        assertThrows(IllegalArgumentException.class, () -> juego.jugar(1, 4));
+    }
 }
