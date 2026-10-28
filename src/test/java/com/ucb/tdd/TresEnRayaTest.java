@@ -72,4 +72,24 @@ class TresEnRayaTest {
         String resultado = juego.jugar(3, 1); // X
         assertEquals("gana X", resultado);
     }
+
+    @Test
+    void ganaXConDiagonalPrincipal() {
+        juego.jugar(1, 1); // X
+        juego.jugar(1, 2); // +
+        juego.jugar(2, 2); // X
+        juego.jugar(1, 3); // +
+        String resultado = juego.jugar(3, 3); // X
+        assertEquals("gana X", resultado);
+    }
+
+    @Test
+    void ganaXConDiagonalInversa() {
+        juego.jugar(1, 3); // X
+        juego.jugar(1, 1); // +
+        juego.jugar(2, 2); // X
+        juego.jugar(1, 2); // +
+        String resultado = juego.jugar(3, 1); // X
+        assertEquals("gana X", resultado);
+    }
 }
