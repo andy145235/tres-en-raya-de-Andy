@@ -15,8 +15,17 @@ public class TresEnRaya {
         if (tablero[x - 1][y - 1] != '\0') {
             throw new IllegalStateException("La casilla (" + x + ", " + y + ") ya está ocupada");
         }
-        tablero[x - 1][y - 1] = turnoActual;
+        
+        char jugador = turnoActual;
+        tablero[x - 1][y - 1] = jugador;
         turnoActual = (turnoActual == 'X') ? '+' : 'X';
+
+        for (int fila = 0; fila < 3; fila++) {
+            if (tablero[fila][0] == jugador && tablero[fila][1] == jugador && tablero[fila][2] == jugador) {
+                return "gana " + jugador;
+            }
+        }
+
         return "sin ganador";
     }
 
